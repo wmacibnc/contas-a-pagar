@@ -7,6 +7,9 @@ error_reporting(E_ALL);
 // config
 include("config.php");
 
+// funcoes
+include("funcoes.php");
+
 ?>
 <!DOCTYPE html>
 <html class="full" lang="pt-br">

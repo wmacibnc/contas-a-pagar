@@ -83,6 +83,28 @@ $(document).ready(function () {
   modal.find('#confirm').attr('href', 'excluir.php?id=' + id);
 })
 
+
+ /**
+ * Passa os dados do cliente para o Modal, e atualiza o link para efetuar o pagamento
+ */
+ $('#pagamento-modal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget);
+  var id = button.data('customer');
+  var modal = $(this);
+  modal.find('#confirm').attr('href', 'pagamento.php?id=' + id);
+})
+
+
+ /**
+ * Passa os dados do cliente para o Modal, e atualiza o link para estornar o pagamento
+ */
+ $('#estorno-modal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget);
+  var id = button.data('customer');
+  var modal = $(this);
+  modal.find('#confirm').attr('href', 'estorno.php?id=' + id);
+})
+
 });
 </script>
 
